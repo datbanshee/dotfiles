@@ -15,8 +15,3 @@ To symlink files use:
 
 >> ln -s dotfiles/zsh/zshrc.symlink .zshrc
 
-TODO
-----
-
-* Create dotfiles for vim;
-* Create script that will automate installing process.
