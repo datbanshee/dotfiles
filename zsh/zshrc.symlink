@@ -1,0 +1,27 @@
+export PATH=/Users/araeris/.dotfiles/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin
+
+# shortcut to this dotfiles path is $ZSH
+export ZSH=$HOME/.dotfiles
+export DOTFILES=$HOME/.dotfiles
+
+# your project folder that we can `c [tab]` to
+export PROJECTS=~/code
+
+# source /opt/github/env.sh
+
+# source every .zsh file in this rep
+for config_file ($ZSH/**/*.zsh) source $config_file
+
+# use .localrc for SUPER SECRET CRAP that you don't
+# want in your public, versioned repo.
+if [[ -a ~/.localrc ]]
+then
+  source ~/.localrc
+fi
+
+# initialize autocomplete here, otherwise functions won't be loaded
+autoload -U compinit
+compinit
+
+# source sub
+# eval "$($DOTFILES/araeris/bin/araeris init -)"
